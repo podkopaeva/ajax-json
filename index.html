@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+</head>
+<body>
+	<h1>Learn JSOn</h1>
+	<script>
+		// var people = {
+		// 	"person": {
+		// 		"firstName":"Julia"
+		// 		,"lastName":"Podkopaeva"
+		// 		,"job":"developer"
+		// 		,"age":30
+		// 	}
+		// };
+		// console.log(people);
+
+		var myObj = {
+			"friend": [{
+				"firstName":"Mike"
+				,"lastName":"Jones"
+			},{
+				"firstName":"John"
+				,"lastName":"Smith"
+				},{
+				"firstName":"Jul"
+				,"lastName":"Podkopave"
+				}
+			]
+		}
+		
+		var users = myObj.friend;
+		for (var x in users) {
+			console.log(users[x]);
+		}
+	</script>
+</body>
+</html>
