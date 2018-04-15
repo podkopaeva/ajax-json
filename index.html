@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+</head>
+<body>
+ <h1>Learn JSON</h1>
+    <div id="output"></div>
+    <form id="myForm">
+    	<input type="text" name="first" value="Julia">
+    	<input type="text" name="last" value="Podkopaeva">
+    	 <input type="text" name="email" value="test@test.com"><br>
+    	<input type="text" name="company" value="Ciklum">
+    	<br>
+    	<input type="submit" value="submit">
+    </form>
+    <!-- <script>
+     var myForm = document.getElementById('myForm');
+        
+        window.onload = function(){
+            if(sessionStorage['person'] != null){
+                var data = JSON.parse(sessionStorage['person'])
+                var message = 'Welcome '+data.first+' '+data.last+' to the site!!!';
+                document.getElementById('output').innerHTML = message;
+                console.log(data)
+            }
+        }
+        
+        
+        
+        myForm.addEventListener('submit',function(e){
+            e.preventDefault();
+            var data = JSON.stringify(formData(myForm));
+            if(data){
+                sessionStorage['person'] = data;
+            }
+            console.log(data)
+        })
+        
+        function formData(form){
+            var el = form.querySelectorAll('input[type="text"]');
+            var myData = {};
+            for(var x=0;x<el.length;x++){
+                var name = el[x].name;
+                var value = el[x].value;
+                myData[name ] = value
+            }
+            
+            return myData;
+        }
+    </script> -->
+  <!--   <script>
+    	var data = '{"results":[{"gender":"female","name":{"title":"ms","first":"sandia","last":"oonk"},"location":{"street":"6561 gasthuisstraat","city":"woensdrecht","state":"noord-holland","postcode":20266},"email":"sandia.oonk@example.com","login":{"username":"beautifulrabbit916","password":"farscape","salt":"YQ4ux0CR","md5":"5857ef51434a257c5700f1aa27ee3e91","sha1":"0edc8c5f25c029fdd196c07446358093a0cfc1d6","sha256":"5ce2da1fe62f3ba4ff4b362442668ca564c120a8eee5278dc0e4151b54f20b6d"},"dob":"1949-11-11 21:05:21","registered":"2014-10-30 12:00:00","phone":"(004)-603-3973","cell":"(661)-091-5135","id":{"name":"BSN","value":"78394329"},"picture":{"large":"https://randomuser.me/api/portraits/women/15.jpg","medium":"https://randomuser.me/api/portraits/med/women/15.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/15.jpg"},"nat":"NL"}],"info":{"seed":"578b7ead3c7a6d4f","results":1,"page":1,"version":"1.1"}}';
+
+    	var dataJ = JSON.parse(data);
+    	var output = document.querySelector('#output')
+    	var person = dataJ.results[0];
+
+       var html = person.name.first + '  ' + person.name.last 
+        html += '<img src="'+person.picture.thumbnail+'">';
+        output.innerHTML = html;
+    	var strMe = JSON.stringify(dataJ);
+    	console.log(strMe);
+    </script> -->
+  <!--   <script type="text/javascript">
+        var myObj = {
+            "friends": [{
+                "firstName": "Mike"
+                , "lastName": "Jones"
+           },{
+                "firstName": "John"
+                , "lastName": "Smith"
+           } ,{
+                "firstName": "Laurence"
+                , "lastName": "Svekis"
+           },{
+                "firstName": "Alice"
+                , "lastName": "James"
+           }]
+        }
+        
+        var html = '';
+        
+        myObj.friends.splice(3,0,{
+                "firstName": "New"
+                , "lastName": "Person"
+           })
+        
+        var output = document.getElementById('output');
+        for(x=0;x<myObj.friends.length;x++){
+            html += (Number(x)+1) + ' . ' + myObj.friends[x].firstName + ' ' + myObj.friends[x].lastName + '<br>'
+            
+        }
+        output.innerHTML = html;
+        myObj.friends.forEach(function(item){
+            output.innerHTML += item.firstName + ' ' + item.lastName + '<br>'
+        })
+        
+        
+    </script> -->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
